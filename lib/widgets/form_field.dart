@@ -1,3 +1,4 @@
+import 'package:fashion_style_mobile/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class TextInput extends StatelessWidget {
@@ -17,6 +18,7 @@ class TextInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: inputType == TextInputType.visiblePassword,
       style: TextStyle(
           color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
       textAlignVertical: TextAlignVertical.center,
@@ -31,7 +33,8 @@ class TextInput extends StatelessWidget {
           contentPadding: EdgeInsets.only(right: 20),
           border: OutlineInputBorder(),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.blueAccent, width: 1.5),
+            borderSide: BorderSide(
+                color: MyConstants.of(context)!.primaryColor, width: 1.5),
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.grey, width: 0.5),
