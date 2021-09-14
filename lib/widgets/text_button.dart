@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fashion_style_mobile/utils/constants.dart';
 
 class CustomButton extends StatelessWidget {
   final VoidCallback onpressed;
@@ -37,7 +38,7 @@ class CustomButton extends StatelessWidget {
                   left: 20,
                   child: Icon(
                     this.prefixIcon,
-                    color: Colors.blue,
+                    color: MyConstants.of(context)!.primaryColor,
                   ))
           ],
           fit: StackFit.expand,
@@ -47,6 +48,8 @@ class CustomButton extends StatelessWidget {
             side: MaterialStateProperty.all(
                 BorderSide(color: Colors.grey, width: 0.5)),
             backgroundColor: MaterialStateProperty.all<Color>(
-                this.bgColor != null ? this.bgColor! : Colors.blue.shade300)));
+                this.bgColor != null
+                    ? this.bgColor!
+                    : MyConstants.of(context)!.primaryColor)));
   }
 }

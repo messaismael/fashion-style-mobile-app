@@ -1,8 +1,10 @@
-import 'package:fashion_style_mobile/screens/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:fashion_style_mobile/screens/login_screen.dart';
+import 'package:fashion_style_mobile/utils/constants.dart';
+import 'package:fashion_style_mobile/utils/routes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyConstants(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,6 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes: routes,
       home: Main(
         title: "Fasion Style",
       ),
