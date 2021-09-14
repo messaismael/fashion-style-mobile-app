@@ -6,19 +6,22 @@ class TextInput extends StatelessWidget {
   final IconData? prefixIcon;
   final String? errorMessage;
   final TextInputType inputType;
+  final String? Function(String?) validator;
 
   const TextInput(
       {Key? key,
       this.hintText,
       this.prefixIcon,
       this.errorMessage,
-      required this.inputType})
+      required this.inputType,
+      required this.validator})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: inputType == TextInputType.visiblePassword,
+      validator: this.validator,
       style: TextStyle(
           color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
       textAlignVertical: TextAlignVertical.center,
