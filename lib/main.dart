@@ -1,3 +1,4 @@
+import 'package:fashion_style_mobile/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fashion_style_mobile/screens/login_screen.dart';
 import 'package:fashion_style_mobile/utils/constants.dart';
@@ -34,7 +35,8 @@ class Main extends StatefulWidget {
 class _MainState extends State<Main> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return LoginScreen();
+    /* Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -43,7 +45,7 @@ class _MainState extends State<Main> {
               border: Border.all(
             width: 0,
           )),
-          child: Center(child: LoginScreen())),
-    );
+          child: Center(child: HomeScreen())),
+    ); */
   }
 }
