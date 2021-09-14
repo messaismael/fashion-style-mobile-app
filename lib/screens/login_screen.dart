@@ -30,6 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
         body: Center(
             child: SingleChildScrollView(
                 child: Container(
+                    margin: EdgeInsets.symmetric(vertical: 50),
                     decoration: BoxDecoration(
                         /* border: Border.all(width: 2, color: Colors.indigo) */),
                     padding: EdgeInsets.all(15),
@@ -41,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Container(
-                                      padding: EdgeInsets.only(top: 20),
+                                      padding: EdgeInsets.only(top: 50),
                                       child: Logo()),
                                   Padding(
                                     padding:
@@ -159,7 +160,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                   Container(
                                       width: double.infinity,
-                                      margin: EdgeInsets.only(top: 15),
+                                      margin: EdgeInsets.only(top: 25),
                                       child: Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,

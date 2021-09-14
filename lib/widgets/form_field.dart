@@ -27,7 +27,7 @@ class TextInput extends StatelessWidget {
       textAlignVertical: TextAlignVertical.center,
       keyboardType: this.inputType,
       decoration: InputDecoration(
-          errorStyle: TextStyle(fontSize: 11, height: 0),
+          errorStyle: TextStyle(fontSize: 11, height: 0.3),
           errorMaxLines: 2,
           helperText: this.errorMessage != null ? "" : null,
           helperMaxLines: 2,
